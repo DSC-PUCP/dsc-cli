@@ -4,9 +4,17 @@ Official CLI for DSC-PUCP.
 
 ## Installation
 
-### Requirements
+### Quick install (macOS / Linux)
 
-- [Go](https://go.dev/dl/) 1.23+
+```bash
+curl -fsSL https://raw.githubusercontent.com/DSC-PUCP/dsc-cli/main/install.sh | sh
+```
+
+### Homebrew (macOS)
+
+```bash
+brew install DSC-PUCP/tap/dsc
+```
 
 ### From source
 
@@ -15,17 +23,6 @@ git clone https://github.com/DSC-PUCP/dsc-cli.git
 cd dsc-cli
 make install
 ```
-
-### With go install
-
-```bash
-go install github.com/DSC-PUCP/dsc-cli@latest
-```
-
-> The binary installs as `dsc-cli`. To rename it to `dsc`:
-> ```bash
-> mv $(go env GOPATH)/bin/dsc-cli $(go env GOPATH)/bin/dsc
-> ```
 
 ## Setup
 

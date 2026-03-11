@@ -1,0 +1,42 @@
+version: 2
+
+project_name: dsc
+
+builds:
+  - binary: dsc
+    main: .
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w -X github.com/DSC-PUCP/dsc-cli/cmd.Version={{.Version}}
+
+archives:
+  - formats:
+      - tar.gz
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+    name_template: "dsc_{{ .Os }}_{{ .Arch }}"
+
+brews:
+  - repository:
+      owner: DSC-PUCP
+      name: homebrew-tap
+    name: dsc
+    homepage: https://github.com/DSC-PUCP/dsc-cli
+    description: Official CLI for DSC-PUCP
+    install: |
+      bin.install "dsc"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^chore:"
