@@ -10,12 +10,6 @@ Official CLI for DSC-PUCP.
 curl -fsSL https://raw.githubusercontent.com/DSC-PUCP/dsc-cli/main/install.sh | sh
 ```
 
-### Homebrew (macOS)
-
-```bash
-brew install DSC-PUCP/tap/dsc
-```
-
 ### From source
 
 ```bash

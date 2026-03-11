@@ -24,16 +24,6 @@ archives:
           - zip
     name_template: "dsc_{{ .Os }}_{{ .Arch }}"
 
-brews:
-  - repository:
-      owner: DSC-PUCP
-      name: homebrew-tap
-    name: dsc
-    homepage: https://github.com/DSC-PUCP/dsc-cli
-    description: Official CLI for DSC-PUCP
-    install: |
-      bin.install "dsc"
-
 changelog:
   sort: asc
   filters:
